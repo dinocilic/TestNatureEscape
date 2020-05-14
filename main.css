@@ -1,0 +1,315 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default padding */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Remove list styles on ul, ol elements with a class attribute */
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Natural flow and rhythm in articles by default */
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  resize: none;
+}
+/*
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap');
+*/
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400&display=swap');
+
+/* Header */
+.container-fluid, .row {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+  /* font-family: Georgia, 'Times New Roman', Times, serif; */
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+/* Header */
+.topbar {
+  z-index: 2;
+  position: fixed;
+  right: 10px;
+  top: 92%;
+  color: #fff;
+}
+
+.topbar .fas {
+  font-size: 1.5rem;
+  padding: 5px;
+  color: #fff;
+}
+.topbar .nav-link {
+  color: #fff;
+}
+
+.topbar .dropup {
+  width: 153px;
+  height: 50px;
+}
+
+.natureshow, .ab, .nat, .tr, .ct {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;    
+  align-items: center;
+  justify-content: center;
+}
+.video-container {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.video-container video {
+  min-width: 100%;
+  min-height: 100%;
+  position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	object-fit: cover;
+}
+
+.nature-intro {
+  z-index: 2;
+  letter-spacing: 0.6rem; 
+  text-shadow: 1px 1px white;
+  text-align: center;
+}
+
+.nature-intro .title {
+  font-size: 3.5rem;
+}
+.nature-intro .title-desc {
+  font-size: 1.5rem;
+}
+.nature-intro .title-btn {
+  letter-spacing: 0;
+  margin: 10px;
+  text-shadow: 1px 1px black;
+} 
+
+/* About */
+.ab .ab-box {
+  height: 10%;
+}
+
+.ab .ab-img {
+  border-radius: 40%;
+}
+
+.ab .ab-intro {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+  font-size: 17px;
+}
+
+/* Parallax */
+.parallax {
+  height: 200px;
+  background: url("./img/rafting.jpg");
+  background-attachment: fixed;
+  
+}
+.parallax-two {
+  height: 200px;
+  background: url("./img/sarajevo-carsija.jpg");
+  background-attachment: fixed;
+  
+}
+
+/* Nature */
+.nat {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.nat img {
+  opacity: 0.8;
+}
+.nat img:hover {
+  opacity: 1;
+}
+.nat .nat-title {
+  text-align: center;
+  padding: 10px;
+  letter-spacing: 0.5rem;
+  line-height: 1.5;
+  text-shadow: 1px 1px green;
+}
+
+.nat .nat-desc {
+  margin-top: 10px;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.nat-head, .ab-head {
+  position: relative;
+  margin-bottom: 5%;
+}
+
+.headline {
+  position: relative;
+  padding: 10px;
+  text-align: center;
+  letter-spacing: .6rem;
+  text-shadow: 1px 1px green;
+  box-shadow: 5px 5px green;
+}
+
+/* Tourism */
+.tr-head {
+  position: relative;
+  margin-bottom: 5%;
+}
+
+.tr-text {
+  text-shadow: 1px 1px black;
+  box-shadow: 2px 2px green;
+  padding: 10px;
+}
+
+.tr-box {
+  position: relative;
+  top: 5%;
+}
+
+.tr-box .card-title {
+  text-shadow: 1px 1px;
+  box-shadow: 2px 2px green;
+}
+.tr-box .card-title:hover {
+  background-color: lightgreen;
+}
+
+.tr-box a {
+  color: black;
+  text-decoration: none;
+}
+
+.tr-box .card {
+  border: none;
+}
+
+/* Contact  */
+
+.ct .ct-img {
+  position: relative;
+  top: 25%;
+}
+
+.ct .ct-form {
+  background-color: lightgreen;
+  padding: 25px;
+  margin-top: 15px;
+}
+
+/* Footer */
+.ft {
+  padding: 50px;
+  background-color: #333333;
+  color: #f4f4f4;
+}
+.ft .ft-img {
+  display: block;
+  max-width: 25%;
+  margin: auto;
+}
+
+.ft .list-group {
+  width: 50%;
+  display: block;
+  position: relative;
+  left: 25%;
+}
+.ft .list-group-item {
+  background-color: transparent;
+  color: #f4f4f4;
+  border-color: #f4f4f4;
+  text-align: center;
+}
+
+/* #map {
+  width: 100%;
+  height: 200px;
+} */
